@@ -24,11 +24,11 @@
 
     $num1 = 10;
     if($num1 > 0){
-        echo "Número positivo";
+        echo " Número positivo";
     }elseif($num1 < 0){
-        echo "Número negativo";
+        echo " Número negativo";
     }elseif($num1 === 0){
-        echo "Número igual a zero";
+        echo " Número igual a zero";
     }
 
 
