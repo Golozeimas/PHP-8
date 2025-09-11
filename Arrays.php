@@ -12,6 +12,13 @@ $lista3 = array(
     3 => "Luffy"
 );
 
+$categorias = [
+    1 => "Ação",
+    2 => "Drama",
+    3 => "Terror",
+    4 => "Horror"
+];
+
 foreach($lista1 as $i => $numbers){
     echo $i . $numbers;
 }
@@ -27,4 +34,22 @@ var_dump($lista3);
 
 var_dump($lista1);
 
+for($i = 10; $i <= 20; $i++){ // bobeira, iniciou o for não adiciona ainda, só adiciona na segunda
+    $lista[] = $i; // cria indices e adiciona os números, para esse arrays, por exemplo o 11 estar no indice[1]
+}
+
+
+var_dump(($lista));
+
+
+$nova = array_pop(($lista)); // remove e retorna o ultimo elemento da lista
+
+$nova1 = array_push($lista,5); // adiciona os elemento no caso aqui seria o 5 no final do array e retorna seu tamanho atual [indice, no caso 11] 
+
+echo "<br>". $nova;
+echo "<br>". $nova1;
+
+echo "<br>";
+
+var_dump($lista);
 ?>
