@@ -1,3 +1,4 @@
+<?php
 $n1 = 10;
 $n2 = 10;
 
@@ -7,3 +8,5 @@ if ($n1 === $n2){
 }else{
     echo "Não é uma raiz quadrada:" . $n1;
 }
+
+?>
