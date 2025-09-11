@@ -12,7 +12,7 @@ echo $frase;
 echo "\n";
 echo $inteiro;
 
-echo $listaDePalavras; // echo não funciona para a printagem do tipo array e nem de false
+echo $listaDePalavras[0]; // echo não funciona para a printagem do tipo array e nem de false
 
 echo $condicaoNegativa;
 
