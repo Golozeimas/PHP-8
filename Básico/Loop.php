@@ -4,9 +4,16 @@ $num1 = 4;
 
 $num2 = 3;
 
+
+for($i = 0; $i <= 100; ++$i){
+    echo "<h1 style='display:inline;'>".$i."</h1> <br>";
+}
+
+
+
 $resultado = 0;
 for($i = 0; $i < 4; $i++){ // o for conta com a seguinte estrutura ([declaração de varivel geralmente contadora]; [condição que tem que ser verdadeira; e adicionar++ ou remover--])
-   $resultado = $num2+$num1;
+   $resultado = $num2*$num1;
 }
 
 echo "Resultado da multiplicação:" . $resultado;
