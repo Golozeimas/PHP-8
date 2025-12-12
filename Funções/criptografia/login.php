@@ -5,15 +5,20 @@ if(count($_POST) > 0 ){
     $email = $_POST["email"];
     $senha = $_POST["senha"];
 
-    $query_para_ler_as_linhas =  $mysqli -> query("SELECT * FROM senhas WHERE email = '$email' LIMIT 1");
+    $query_para_ler_as_linhas =  $mysqli -> query("SELECT * FROM senhas");
     
     $usuario = $query_para_ler_as_linhas -> fetch_assoc();
 
     if(password_verify($senha,$usuario["senha"])){
-        echo "Bem vindo, ". $email;
+        if(!isset($_SESSION)){
+            session_start();
+            $_SESSION["usuario"] = $usuario["id"];
+            header("Location: lista_de_usuarios.php");
+        }
     }else{
         echo "Senha está errada!";
     }
+    
 }
 
 ?>
@@ -28,7 +33,7 @@ if(count($_POST) > 0 ){
 <body>
 
     <h1>Login</h1>
-    <form action="" method="POST">
+    <form  method="POST">
         <input type="text" name="email">
         <input type="password" name="senha">
         <button type="submit">Entrar</button>
